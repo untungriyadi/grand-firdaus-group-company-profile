@@ -1504,6 +1504,8 @@ button:focus {
   padding: 10px 25px;
   border: 1px solid #14591D;
   transition: all 0.2s ease-in;
+  border-radius: 25px;
+  width: 100%;
 }
 .team-section .team-member .contents .btn-main:hover {
   background: #14591D;
@@ -2849,6 +2851,18 @@ button:focus {
   .back-to-top {
     bottom: 15px;
     right: 15px;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .header-uper{
+    display: none;
+  }
+
+  .slick-list{
+    margin-top: 5%;
   }
 }
 .back-to-top:hover {

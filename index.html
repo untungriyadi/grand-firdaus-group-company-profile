@@ -43,55 +43,70 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
    <style>
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
 
-        .popup {
-            font-family: Arial, sans-serif;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
+    .popup {
+        font-family: Arial, sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.95);
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
 
-        .popup-content {
-            text-align: center;
-            z-index: 1000;
-        }
+    .popup-content {
+        text-align: center;
+        z-index: 1001;
+    }
 
-        .popup .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 40px;
-            cursor: pointer;
-            color: #333;
-            z-index: 1000;
-        }
+    .popup .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 40px;
+        cursor: pointer;
+        color: #333;
+        z-index: 1001;
+    }
 
-        .popup button {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    </style>
+    .popup button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Saat aktif (muncul dengan efek fade-in + zoom-in) */
+    .popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-overlay.active .popup {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+  </style>
 
 </head>
 
@@ -114,40 +129,30 @@
         <div class="top-right text-center text-md-right">
           <ul class="social-links">
             <li data-aos="fade-down"data-aos-easing="linear"data-aos-duration="800">
-              <a href="#" aria-label="facebook">
-                <i class="fab fa-facebook-f"></i>
+              <a href="https://wa.me/081320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya!" aria-label="whatsapp">
+                <i class="fab fa-whatsapp"></i>
               </a>
             </li>
             <li data-aos="fade-down"data-aos-easing="linear"data-aos-duration="850">
-              <a href="#" aria-label="facebook">
-                <i class="fab fa-facebook-f"></i>
+              <a href="https://www.tiktok.com/@grandfirdausgroup_?_t=ZS-90GRVWaUme7&_r=1" aria-label="tiktok">
+                <i class="fab fa-tiktok"></i>
               </a>
             </li>
             <li data-aos="fade-down"data-aos-easing="linear"data-aos-duration="900">
-              <a href="#" aria-label="facebook">
+              <a href="https://www.facebook.com/share/1BeoBA9yoD/" aria-label="facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
-            <!-- <li>
-              <a href="#" aria-label="twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li> -->
-            <!-- <li>
-              <a href="#" aria-label="google-plus">
-                <i class="fab fa-google-plus-g"></i>
-              </a>
-            </li> -->
             <li data-aos="fade-down"data-aos-easing="linear"data-aos-duration="950">
-              <a href="#" aria-label="instagram">
+              <a href="https://www.instagram.com/grandfirdausgroup_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="instagram">
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
-            <!-- <li>
-              <a href="#" aria-label="pinterest">
-                <i class="fab fa-pinterest-p"></i>
+            <li data-aos="fade-down"data-aos-easing="linear"data-aos-duration="800">
+              <a href="https://youtube.com/@grandfirdausgroup?si=JRfPL8dy17TfYd6L" aria-label="youtube">
+                <i class="fab fa-youtube"></i>
               </a>
-            </li> -->
+            </li>
           </ul>
         </div>
       </div>
@@ -190,7 +195,7 @@
             </li>
           </ul>
           <div class="link-btn text-center text-lg-right">
-            <a href="contact.html" class="btn-style-one" data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1100">Hubungi Kami</a>
+            <a href="https://wa.me/081320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya" class="btn-style-one" data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1100">Hubungi Kami</a>
           </div>
         </div>
       </div>
@@ -294,7 +299,7 @@
           <div class="content style text-center">
             <h2 class="text-white text-bold mb-2" data-animation-in="slideInLeft">Grand Firdaus Argasunya</h2>
             <p class="tag-text mb-4" data-animation-in="slideInRight">Rumah Subsidi Lokasi Kota, Harga Terjangkau dan Berkualitas | Hunian Nyaman di Kota Cirebon</p>
-            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInLeft" data-duration-in="1.2">lihat selengkapnya</a>
+            <a href="#" class="btn btn-main btn-white" data-animation-in="slideInLeft" data-duration-in="1.2">lihat selengkapnya</a>
           </div>
           <!-- Slide Content End -->
         </div>
@@ -310,7 +315,7 @@
           <div class="content style text-center">
             <h2 class="text-white" data-animation-in="slideInRight">Grand AlFatih Residence</h2>
             <p class="tag-text mb-4" data-animation-in="slideInRight" data-duration-in="0.6">Rumah Subsidi Lokasi Kota, Harga Terjangkau dan Berkualitas | Hunian Nyaman di Kota Cirebon </p>
-            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInRight" data-duration-in="1.2">Lihat Selengkapnya</a>
+            <a href="#" class="btn btn-main btn-white" data-animation-in="slideInRight" data-duration-in="1.2">Lihat Selengkapnya</a>
           </div>
           <!-- Slide Content End-->
         </div>
@@ -349,7 +354,7 @@
         <h2>24 Jam Aktif</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dignissimos officia dicta suscipit
           vel eum</p>
-        <a href="service.html" class="btn btn-main">Hubungi Kami</a>
+        <a href="https://wa.me/081320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya" class="btn btn-main">Hubungi Kami</a>
       </div>
       <div class="col-lg-4 col-md-12 working-time item">
         <i class="fa fa-stethoscope"></i>
@@ -485,8 +490,8 @@
                       <h3>grand Firdaus Argasunya</h3>
                     </div>
                     <div class="text">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sunt officiis voluptatibus molestias quaerat quam aspernatur, dolores suscipit cumque perferendis.</p>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sunt officiis voluptatibus molestias quaerat quam aspernatur, dolores suscipit cumque perferendis.</p>
+                      <p>Grand Firdaus Argasunya adalah Perumahan Subsidi yang berlokasi di Blok Sumur Kopo Kelurahan Argasunya Kecamatan Harjamukti Kota Cirebon.</p>
+                      <p>Dikembangkan oleh Developer PT. Valken Firdaus Gemilang yang rencananya akan membangun 111 unit rumah subsidi type 30/60 m<span>&sup2;</span></p>
                     </div>
                     <ul class="content-list">
                       <li>
@@ -499,7 +504,7 @@
                         <i class="far fa-dot-circle"></i>Lorem ipsum dolor, sit amet consectetur adipisicing.
                       </li>
                     </ul>
-                    <a href="services.html" class="btn btn-style-one">Read more</a>
+                    <a href="#" class="btn btn-style-one">Lihat Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -531,7 +536,7 @@
                         <i class="far fa-dot-circle"></i>Lorem ipsum dolor, sit amet consectetur adipisicing.
                       </li>
                     </ul>
-                    <a href="services.html" class="btn btn-style-one">Read more</a>
+                    <a href="#" class="btn btn-style-one">Lihat Selengkapnya</a>
                   </div>
                 </div>
               </div>
@@ -670,7 +675,7 @@
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
-                  <img loading="lazy" src="images/gallery/1.jpg" alt="images" class="img-fluid">
+                  <img loading="lazy" src="https://theforage.wpengine.com/wp-content/uploads/2024/03/client-services-e1709741837781.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
@@ -686,7 +691,7 @@
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
-                  <img loading="lazy" src="images/gallery/2.jpg" alt="images" class="img-fluid">
+                  <img loading="lazy" src="https://theforage.wpengine.com/wp-content/uploads/2024/03/client-services-e1709741837781.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
@@ -702,7 +707,7 @@
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
-                  <img loading="lazy" src="images/gallery/3.jpg" alt="images" class="img-fluid">
+                  <img loading="lazy" src="https://theforage.wpengine.com/wp-content/uploads/2024/03/client-services-e1709741837781.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
@@ -718,7 +723,7 @@
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
-                  <img loading="lazy" src="images/gallery/1.jpg" alt="images" class="img-fluid">
+                  <img loading="lazy" src="https://theforage.wpengine.com/wp-content/uploads/2024/03/client-services-e1709741837781.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
@@ -734,7 +739,7 @@
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
-                  <img loading="lazy" src="images/gallery/2.jpg" alt="images" class="img-fluid">
+                  <img loading="lazy" src="https://theforage.wpengine.com/wp-content/uploads/2024/03/client-services-e1709741837781.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
@@ -750,7 +755,7 @@
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
-                  <img loading="lazy" src="images/gallery/3.jpg" alt="images" class="img-fluid">
+                  <img loading="lazy" src="https://theforage.wpengine.com/wp-content/uploads/2024/03/client-services-e1709741837781.jpg" alt="images" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
@@ -782,31 +787,31 @@
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6">
         <div class="team-member">
-          <img loading="lazy" src="images/team/doctor-2.jpg" alt="doctor" class="img-fluid">
+          <img loading="lazy" src="https://ap-southeast-2-seek-apac.graphassets.com/AEzBCRO50TYyqbV6XzRDQz/y6zZFAVSS8mqF3YBKsJq" alt="doctor" class="img-fluid">
           <div class="contents text-center">
-            <h4>Dr. Robert Barrethion</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
-            <a href="appointment.html" class="btn btn-main">Book Appointment</a>
+            <h4>wiwin fatimah</h4>
+            <p>Kamu layaknya karya seni. Tidak semua orang akan mengerti dirimu, tetapi orang-orang yang mengerti, tidak akan pernah melupakanmu.</p>
+            <a href="appointment.html" class="btn btn-main">Hubungi</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="team-member">
-          <img loading="lazy" src="images/team/doctor-lab-3.jpg" alt="doctor" class="img-fluid">
+          <img loading="lazy" src="https://ap-southeast-2-seek-apac.graphassets.com/AEzBCRO50TYyqbV6XzRDQz/y6zZFAVSS8mqF3YBKsJq" alt="doctor" class="img-fluid">
           <div class="contents text-center">
-            <h4>Dr. Marry Lou</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
-            <a href="appointment.html" class="btn btn-main">Book Appointment</a>
+            <h4>wiwin fatimah</h4>
+            <p>Kamu layaknya karya seni, tidak semua orang akan mengerti dirimu, tetapi orang-orang yang mengerti, tidak akan pernah melupakanmu.</p>
+            <a href="appointment.html" class="btn btn-main">Hubungi</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="team-member">
-          <img loading="lazy" src="images/team/event-2.jpg" alt="doctor" class="img-fluid">
+          <img loading="lazy" src="https://ap-southeast-2-seek-apac.graphassets.com/AEzBCRO50TYyqbV6XzRDQz/y6zZFAVSS8mqF3YBKsJq" alt="doctor" class="img-fluid">
           <div class="contents text-center">
-            <h4>Dr. Sansa Stark</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
-            <a href="appointment.html" class="btn btn-main">Book Appointment</a>
+            <h4>wiwin fatimah</h4>
+            <p>Kamu layaknya karya seni, tidak semua orang akan mengerti dirimu, tetapi orang-orang yang mengerti, tidak akan pernah melupakanmu.</p>
+            <a href="appointment.html" class="btn btn-main">Hubungi</a>
           </div>
         </div>
       </div>
@@ -1191,7 +1196,7 @@
         <div class="popup-content">
           <img src="images/promo.jpeg" alt="" width="300px" height="700px" class="mb-4">
           <br>
-          <a href="https://wa.me/085871306419?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya!" class="btn btn-success w-100" style="border-radius: 25px; padding: 14px 20px;"><h4>MAU PROMO!!!</h4></a>
+          <a href="https://wa.me/081320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya!" class="btn btn-success w-100" style="border-radius: 25px; padding: 14px 20px;"><h4>MAU PROMO!!!</h4></a>
         </div>
     </div>
   </div>
@@ -1224,35 +1229,36 @@
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const popupOverlay = document.getElementById('popupOverlay');
     const popup = document.getElementById('popup');
     const closePopup = document.getElementById('closePopup');
     const emailInput = document.getElementById('emailInput');
     
-    
     // Function to open the popup
     function openPopup() {
-        popupOverlay.style.display = 'block';
+        popupOverlay.classList.add('active');
     }
 
     // Function to close the popup
     function closePopupFunc() {
-        popupOverlay.style.display = 'none';
+        popupOverlay.classList.remove('active');
+        // Delay untuk memastikan animasi fade out berjalan sebelum display none
+        setTimeout(() => popupOverlay.style.display = 'none', 500);
     }
 
     // Function to submit the signup form
-    function submitForm() {
+    window.submitForm = function() {
         const email = emailInput.value;
-        // Add your form submission logic here
         console.log(`Email submitted: ${email}`);
-        closePopupFunc(); // Close the popup after form submission
+        closePopupFunc();
     }
 
-
-    // Event listeners
-    // Trigger the popup to open (you can call this function on a button click or any other event)
-    openPopup();
+    // 🕒 Tunggu 3 detik sebelum menampilkan popup
+    setTimeout(() => {
+        popupOverlay.style.display = 'block';
+        openPopup();
+    }, 3000);
 
     // Close the popup when the close button is clicked
     closePopup.addEventListener('click', closePopupFunc);
@@ -1263,9 +1269,8 @@
             closePopupFunc();
         }
     });
-    // You can customize and expand these functions based on your specific requirements.
 });
-</script>  
+</script>
 </body>
 
 </html>
