@@ -2862,7 +2862,7 @@ button:focus {
   }
 
   .slick-list{
-    margin-top: 5%;
+    /* margin-top: 5%; */
   }
 }
 .back-to-top:hover {
