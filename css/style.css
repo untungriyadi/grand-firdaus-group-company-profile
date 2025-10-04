@@ -647,10 +647,11 @@ button:focus {
 }
 
 .cta {
+  margin-top: -100px;
   padding: 40px 0;
 }
 .cta .cta-block {
-  border-radius: 4px;
+  border-radius: 25px;
   overflow: hidden;
 }
 .cta .cta-block .emmergency {
@@ -2863,6 +2864,11 @@ button:focus {
 
   .slick-list{
     /* margin-top: 5%; */
+  }
+
+  .typing-text{
+    margin-top: 4%;
+    margin-bottom: 4%;
   }
 }
 .back-to-top:hover {

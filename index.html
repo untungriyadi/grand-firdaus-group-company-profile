@@ -86,15 +86,6 @@
         z-index: 1001;
     }
 
-    .popup button {
-        background-color: #4caf50;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-    }
 
     /* Saat aktif (muncul dengan efek fade-in + zoom-in) */
     .popup-overlay.active {
@@ -106,6 +97,39 @@
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
+
+    /* typing text */
+    .wrap{
+      max-width:900px;
+      text-align:center
+    }
+    
+    
+    .typing{
+      /* font-size:1.6rem; */
+      min-height:2.2rem;
+      white-space:nowrap;
+      overflow:hidden;
+      color:#14591D;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+      .cursor{
+        display:inline-block;
+        width:2px;
+        height:0.9rem;
+        background-color: rgb(111, 111, 111);
+        vertical-align:middle;
+        margin-left:3px;
+        border-radius:2px;
+        animation:blink 1s steps(2,start) infinite;
+        margin-top: -2px;
+      }
+    
+      @keyframes blink{50%{opacity:0}}
+    
   </style>
 
 </head>
@@ -122,7 +146,11 @@
     <div class="row align-items-center">
       <div class="col-md-8">
         <div class="top-left text-center text-md-left">
-          <h6 data-aos="fade-down"data-aos-easing="linear"data-aos-duration="750">Rumah Subsidi Lokasi Kota, Harga Terjangkau dan Berkualitas | Hunian Nyaman di Kota Cirebon</h6>
+          <!-- <h6 data-aos="fade-down"data-aos-easing="linear"data-aos-duration="750">Rumah Subsidi Lokasi Kota, Harga Terjangkau dan Berkualitas | Hunian Nyaman di Kota Cirebon</h6> -->
+           <div class="typing-text" data-aos="fade-down"data-aos-easing="linear"data-aos-duration="750">
+            <span class="typing" id="typing"></span>
+            <span class="cursor" aria-hidden="true"></span>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
@@ -162,17 +190,17 @@
 <!--header top-->
 
 <!--Header Upper-->
-<section class="header-uper">
+<!-- <section class="header-uper">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-xl-4 col-lg-3 col-md-4">
+      <div class="col-xl-4 col-lg-3 col-md-2">
         <div class="logo">
           <a href="index.html">
             <img loading="lazy" class="img-fluid" src="images/logo.png" alt="logo" data-aos="fade-down"data-aos-easing="linear"data-aos-duration="950" style="width: 40%;">
           </a>
         </div>
       </div>
-      <div class="col-xl-8 col-lg-9 col-md-8">
+      <div class="col-xl-8 col-lg-9 col-md-10">
         <div class="right-side">
           <ul class="contact-info pl-0 mb-4 mb-md-0">
             <li class="item text-left" data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1000">
@@ -201,8 +229,49 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!--Header Upper-->
+
+<section class="header-uper">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-2 col-lg-2">
+        <div class="logo" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="750">
+          <a href="index.html">
+            <img loading="lazy" class="img-fluid" src="images/logo.png" alt="logo">
+          </a>
+        </div>
+      </div>
+      <div class="col-xl-10 col-lg-10">
+        <div class="right-side">
+          <ul class="contact-info mb-4 mb-md-0" style="padding-left: 8.5%">
+            <li class="item text-left" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="850">
+              <div class="icon-box">
+                <i class="far fa-envelope"></i>
+              </div>
+              <strong>Email</strong>
+              <br>
+              <a href="mailto:grandfirdausgroup@gmail.com">
+                <span>grandfirdausgroup@gmail.com</span>
+              </a>
+            </li>
+            <li class="item text-left" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="950">
+              <div class="icon-box">
+                <i class="fas fa-phone"></i>
+              </div>
+              <strong>Telepon</strong>
+              <br>
+              <span>0813 - 2084 - 6005</span>
+            </li>
+          </ul>
+          <div class="link-btn text-center text-lg-right" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1050">
+            <a href="contact.html" class="btn-style-one">Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- <div class="header-uper">
   <div class="container">
@@ -340,25 +409,26 @@
 
 <!--====  End of Page Slider  ====-->
 
+
 <section class="cta">
   <div class="container">
     <div class="cta-block row no-gutters">
-      <div class="col-lg-4 col-md-6 emmergency item">
+      <div class="col-lg-4 col-md-6 emmergency item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000">
         <i class="fa fa-phone"></i>
-        <h2>Telepon Kantor</h2>
+        <h2 style="font-weight: bold;">Telepon Kantor</h2>
         <a href="tel:1-800-700-6200">0813 - 2084 - 6005</a>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus vero quam, porro sit doloremque eaque!</p>
       </div>
-      <div class="col-lg-4 col-md-6 top-doctor item">
+      <div class="col-lg-4 col-md-6 top-doctor item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1100">
         <i class="fa fa-stethoscope"></i>
-        <h2>24 Jam Aktif</h2>
+        <h2 style="font-weight: bold;">24 Jam Aktif</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dignissimos officia dicta suscipit
           vel eum</p>
         <a href="https://wa.me/6281320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya" class="btn btn-main">Hubungi Kami</a>
       </div>
-      <div class="col-lg-4 col-md-12 working-time item">
+      <div class="col-lg-4 col-md-12 working-time item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
         <i class="fa fa-stethoscope"></i>
-        <h2>Jam Kerja</h2>
+        <h2 style="font-weight: bold;">Jam Kerja</h2>
         <ul class="w-hours">
           <li>Mon - Fri - <span>8:00 - 17:00</span></li>
           <li>Mon - Fri - <span>8:00 - 17:00</span></li>
@@ -376,13 +446,13 @@
 			<div class="col-lg-12">
 				<div class="image-content">
 					<div class="section-title text-center">
-						<h3>Grand Firdaus Group<span> <br>Perumahan Subsidi Strategis di Kota Cirebon</span></h3>
-						<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br> nam error officia vero tempora alias? Sunt?</p>
+						<h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000" >Grand Firdaus Group<span><br>Perumahan Subsidi Strategis di Kota Cirebon</span></h3>
+						<p class="mb-0" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br> nam error officia vero tempora alias? Sunt?</p>
 					</div>
 
 					<div class="row">
 						<div class="col-sm-6">
-							<div class="item text-center">
+							<div class="item text-center" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">
 								<div class="icon-box">
 									<figure>
 										<a href="services.html"><img loading="lazy" src="images/resource/1.png" alt="features image"></a>
@@ -395,7 +465,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="item text-center">
+							<div class="item text-center" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
 								<div class="icon-box">
 									<figure>
 										<a href="services.html">
@@ -410,7 +480,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="item text-center">
+							<div class="item text-center" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
 								<div class="icon-box">
 									<figure>
 										<a href="services.html">
@@ -425,7 +495,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="item text-center">
+							<div class="item text-center" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1600">
 								<div class="icon-box">
 									<figure>
 										<a href="services.html">
@@ -454,16 +524,16 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title text-center mb-5">
-						<h3>Produk<span> Kami</h3>
-						<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br> nam error officia vero tempora alias? Sunt?</p>
+						<h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000">Produk<span> Kami</h3>
+						<p class="mb-0" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br> nam error officia vero tempora alias? Sunt?</p>
 					</div>
           <!-- Nav tabs -->
           <div class="tabs mb-5">
             <ul class="nav nav-tabs justify-content-center" id="aboutTab" role="tablist">
-              <li class="nav-item" role="presentation">
+              <li class="nav-item" role="presentation" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
                 <a class="nav-link active" id="dormitory-tab" data-toggle="tab" href="#dormitory" role="tab" aria-controls="dormitory" aria-selected="true">grand Firdaus Argasunya</a>
               </li>
-              <li class="nav-item" role="presentation">
+              <li class="nav-item" role="presentation" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">
                 <a class="nav-link" id="orthopedic-tab" data-toggle="tab" href="#orthopedic" role="tab" aria-controls="orthopedic" aria-selected="false">grand alFatih residence</a>
               </li>
               <!-- <li class="nav-item" role="presentation">
@@ -481,10 +551,10 @@
           <div class="tab-content" id="aboutTab">
             <div class="service-box tab-pane fade show active" id="dormitory">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
                   <img loading="lazy" class="img-fluid" src="images/services/service-one.jpeg" alt="service-image">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
                   <div class="contents">
                     <div class="section-title">
                       <h3>grand Firdaus Argasunya</h3>
@@ -513,10 +583,10 @@
             <!--Start single tab content-->
             <div class="service-box tab-pane fade" id="orthopedic">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
                   <img loading="lazy" class="img-fluid" src="images/services/service-two.jpeg" alt="service-image">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
                   <div class="contents">
                     <div class="section-title">
                       <h3>grand alFatih residence</h3>
@@ -662,16 +732,16 @@
 <section class="service-section bg-gray section">
   <div class="container">
     <div class="section-title text-center">
-      <h3>Layanan
+      <h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000">Layanan
         <span>Kami</span>
       </h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. qui suscipit atque <br>
+      <p data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1100">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. qui suscipit atque <br>
         fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!</p>
     </div>
     <div class="row">
       <div class="col-lg-12">
         <div class="items-container">
-          <div class="item">
+          <div class="item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
@@ -687,7 +757,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
@@ -703,7 +773,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
             <div class="inner-box shadow-sm">
               <div class="img_holder">
                 <a href="service.html">
@@ -778,15 +848,15 @@
 <section class="team-section section">
   <div class="container">
     <div class="section-title text-center">
-      <h3>Tim
+      <h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000">Tim
         <span>Marketing Kami</span>
       </h3>
-      <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illo, rerum
+      <p class="mb-0" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illo, rerum
         <br>natus nobis deleniti doloremque minima odit voluptatibus ipsam animi?</p>
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6">
-        <div class="team-member">
+        <div class="team-member" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
           <img loading="lazy" src="https://ap-southeast-2-seek-apac.graphassets.com/AEzBCRO50TYyqbV6XzRDQz/y6zZFAVSS8mqF3YBKsJq" alt="doctor" class="img-fluid">
           <div class="contents text-center">
             <h4>wiwin fatimah</h4>
@@ -796,7 +866,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="team-member">
+        <div class="team-member" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">
           <img loading="lazy" src="https://ap-southeast-2-seek-apac.graphassets.com/AEzBCRO50TYyqbV6XzRDQz/y6zZFAVSS8mqF3YBKsJq" alt="doctor" class="img-fluid">
           <div class="contents text-center">
             <h4>wiwin fatimah</h4>
@@ -806,7 +876,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
-        <div class="team-member">
+        <div class="team-member" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
           <img loading="lazy" src="https://ap-southeast-2-seek-apac.graphassets.com/AEzBCRO50TYyqbV6XzRDQz/y6zZFAVSS8mqF3YBKsJq" alt="doctor" class="img-fluid">
           <div class="contents text-center">
             <h4>wiwin fatimah</h4>
@@ -821,12 +891,12 @@
 <!--End team section-->
 
 <!--testimonial-section-->
-<section class="testimonial-section" style="background: url(images/testimonials/1.jpg);">
+<section class="testimonial-section" style="background: url(images/testimonials/1.jpeg);">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="section-title text-center">
-          <h3>Apa
+          <h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000">Apa
             <span>Kata Mereka?</span>
           </h3>
         </div>
@@ -836,11 +906,11 @@
       <div class="col-lg-12">
         <div class="testimonial-carousel">
           <!--Slide Item-->
-          <div class="slide-item">
+          <div class="slide-item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1100">
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/1.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>Adam Rose</h6>
@@ -849,11 +919,11 @@
             </div>
           </div>
           <!--Slide Item-->
-          <div class="slide-item">
+          <div class="slide-item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/2.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>David Warner</h6>
@@ -866,7 +936,7 @@
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/3.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>Amy Adams</h6>
@@ -879,7 +949,7 @@
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/1.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>Adam Rose</h6>
@@ -892,7 +962,7 @@
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/2.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>David Warner</h6>
@@ -905,7 +975,7 @@
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/3.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>Amy Adams</h6>
@@ -918,7 +988,7 @@
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/1.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>Adam Rose</h6>
@@ -931,7 +1001,7 @@
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/2.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>David Warner</h6>
@@ -944,7 +1014,7 @@
             <div class="inner-box text-center">
               <div class="image-box">
                 <figure>
-                  <img loading="lazy" src="images/testimonials/3.png" alt="">
+                  <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4E03AQEatHxV__ws1Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709682564396?e=1762387200&v=beta&t=2OuUWVJEpePUBTmVJxhfxYL3C6jIttXk3eZFoFawabQ" alt="">
                 </figure>
               </div>
               <h6>Amy Adams</h6>
@@ -966,15 +1036,15 @@
       <div class="col-lg-6">
         <div class="accordion-section">
   <div class="section-title">
-    <h3>Tanya<span> Jawab Umum</span> </h3>
+    <h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000">Tanya<span> Jawab Umum</span> </h3>
   </div>
   <div class="accordion-holder">
     <div class="accordion" id="accordionGroup" role="tablist" aria-multiselectable="true">
-      <div class="card">
+      <div class="card" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
         <div class="card-header" role="tab" id="headingOne">
           <h4 class="card-title">
             <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Why Should I choose Medical Health
+              Lorem ipsum dolor sit amet consectetur?
             </a>
           </h4>
         </div>
@@ -992,12 +1062,12 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">
         <div class="card-header" role="tab" id="headingTwo">
           <h4 class="card-title">
             <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo"
               aria-expanded="false" aria-controls="collapseTwo">
-              What are the Centre’s visiting hours?
+              Lorem ipsum dolor sit amet consectetur?
             </a>
           </h4>
         </div>
@@ -1015,12 +1085,12 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
         <div class="card-header" role="tab" id="headingThree">
           <h4 class="card-title">
             <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
-              How many visitors are allowed?
+              Lorem ipsum dolor sit amet consectetur?
             </a>
           </h4>
         </div>
@@ -1045,14 +1115,14 @@
       <div class="col-lg-6">
         <div class="contact-area pl-0 pl-lg-5">
   <div class="section-title">
-    <h3>Jadwalkan
+    <h3 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1100">Jadwalkan
       <span>Kunjungan</span>
     </h3>
   </div>
-  <form name="contact_form" class="default-form contact-form" action="!#" method="post">
+  <form name="contact_form" class="default-form contact-form" action="#" method="post">
     <div class="row">
       <div class="col-md-12">
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
           <input class="form-control" type="text" name="Name" placeholder="Nama Lengkap" required="">
         </div>
         
@@ -1065,16 +1135,16 @@
         </div> -->
       </div>
       <div class="col-md-12">
-        <div class="form-group">
+        <!-- <div class="form-group">
           <input class="form-control" type="datetime-local" name="jadwal" placeholder="jadwal" required="">
-        </div>
-        <div class="form-group">
+        </div> -->
+        <div class="form-group" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">
           <input class="form-control" type="email" name="Email" placeholder="Email" required="">
         </div>
-        <!-- <div class="form-group">
-          <input class="form-control" type="text" name="Date" placeholder="Date" required="" id="datepicker" autocomplete="off">
+        <div class="form-group" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
+          <input class="form-control" type="text" name="Date" placeholder="Tanggal Temu" required="" id="datepicker" autocomplete="off">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-        </div> -->
+        </div>
         <!-- <div class="form-group">
           <select class="form-control" name="subject">
             <option>Doctor</option>
@@ -1084,11 +1154,11 @@
         </div> -->
       </div>
       <div class="col-md-12">
-        <div class="form-group">
-          <textarea class="form-control" name="form_message" placeholder="Ketik pertanyaanmu disini..." required=""></textarea>
+        <div class="form-group" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500">
+          <textarea class="form-control" name="form_message" placeholder="Masukkan pertanyaanmu disini..." required=""></textarea>
         </div>
         <div class="form-group text-center">
-          <button type="submit" class="btn-style-one">Kirim Jadwal</button>
+          <button type="submit" class="btn-style-one" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1600">Kirim Jadwal</button>
         </div>
       </div>
     </div>
@@ -1110,44 +1180,44 @@
             <div class="footer-logo">
               <figure>
                 <a href="index.html">
-                  <img loading="lazy" class="img-fluid" src="images/logo-2.png" alt="medic" style="width: 40%;">
+                  <img loading="lazy" class="img-fluid" src="images/logo-2.png" alt="medic" style="width: 40%;" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1000">
                 </a>
               </figure>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nesciunt iste hic eveniet nam! Ea error ut pariatur nam eos!</p>
+            <p data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nesciunt iste hic eveniet nam! Ea error ut pariatur nam eos!</p>
             <ul class="location-link">
-              <li class="item">
+              <li class="item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>Jl. Kalijaga, Kec. Harjamukti, Kota Cirebon, Jawa Barat 45144</p>
               </li>
-              <li class="item">
+              <li class="item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">
                 <i class="far fa-envelope" aria-hidden="true"></i>
                 <a href="mailto:support@medic.com">
                   <p>grandfirdausgroup@gmail.com</p>
                 </a>
               </li>
-              <li class="item">
+              <li class="item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400">
                 <i class="fas fa-phone" aria-hidden="true"></i>
                 <p>0813 - 2084 - 6005</p>
               </li>
             </ul>
             <ul class="list-inline social-icons">
-              <li class="list-inline-item"><a href="https://www.facebook.com/share/1BeoBA9yoD/" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="https://www.tiktok.com/@grandfirdausgroup_?_t=ZS-90GRVWaUme7&_r=1" aria-label="tiktok"><i class="fab fa-tiktok"></i></a></li>
-              <li class="list-inline-item"><a href="https://www.instagram.com/grandfirdausgroup_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="https://wa.me/6281320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya!" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+              <li class="list-inline-item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500"><a href="https://www.facebook.com/share/1BeoBA9yoD/" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1600"><a href="https://www.tiktok.com/@grandfirdausgroup_?_t=ZS-90GRVWaUme7&_r=1" aria-label="tiktok"><i class="fab fa-tiktok"></i></a></li>
+              <li class="list-inline-item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1700"><a href="https://www.instagram.com/grandfirdausgroup_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1800"><a href="https://wa.me/6281320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya!" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 mb-3 mb-md-0">
-          <h2>Lokasi Perumahan <br> Grand Firdaus Argasunya</h2>
+          <h2 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1200">Lokasi Perumahan <br> Grand Firdaus Argasunya</h2>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.909515247295!2d108.55173347499532!3d-6.780866193216167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1dfb996ad147%3A0x3da0361f89d739d9!2sGrand%20Firdaus%20Argasunya!5e0!3m2!1sid!2sid!4v1759508012359!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.909515247295!2d108.55173347499532!3d-6.780866193216167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1dfb996ad147%3A0x3da0361f89d739d9!2sGrand%20Firdaus%20Argasunya!5e0!3m2!1sid!2sid!4v1759508012359!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1400"></iframe>
         </div>
         <div class="col-lg-4 col-md-4">
           <div class="social-links">
-            <h2>Lokasi Perumahan <br> Grand Al-Fatih Residence</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63390.55247332369!2d108.51310851131065!3d-6.780864449675045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1decac9d7c35%3A0x8a9b40c71fb7475c!2sGrand%20Alfatih%20Residence!5e0!3m2!1sid!2sid!4v1759508146819!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h2 data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1300">Lokasi Perumahan <br> Grand Al-Fatih Residence</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63390.55247332369!2d108.51310851131065!3d-6.780864449675045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1decac9d7c35%3A0x8a9b40c71fb7475c!2sGrand%20Alfatih%20Residence!5e0!3m2!1sid!2sid!4v1759508146819!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="fade-up"data-aos-easing="linear"data-aos-duration="1500"></iframe>
           </div>
         </div>
       </div>
@@ -1271,6 +1341,49 @@
     });
 });
 </script>
+
+<script>
+    // Ganti teks di array ini sesuai kebutuhan
+    const phrases = [
+      'Halo, selamat datang!',  
+      'Rumah Subsidi Lokasi Kota',
+      'Harga Terjangkau dan Berkualitas',
+      'Hunian Nyaman di Kota Cirebon'
+    ];
+
+    const el = document.getElementById('typing');
+    const typeSpeed = 80; // ms per karakter
+    const deleteSpeed = 40; // ms per karakter saat menghapus
+    const pauseBetween = 900; // jeda setelah selesai satu frasa
+
+    function wait(ms){return new Promise(r=>setTimeout(r,ms));}
+
+    async function typeText(text){
+      for(let i=0;i<text.length;i++){
+        el.textContent = text.slice(0,i+1);
+        await wait(typeSpeed);
+      }
+    }
+
+    async function deleteText(text){
+      for(let i=text.length;i>0;i--){
+        el.textContent = text.slice(0,i-1);
+        await wait(deleteSpeed);
+      }
+    }
+
+    (async function main(){
+      let i = 0;
+      while(true){
+        const phrase = phrases[i];
+        await typeText(phrase);
+        await wait(pauseBetween);
+        await deleteText(phrase);
+        await wait(250);
+        i = (i+1) % phrases.length;
+      }
+    })();
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Typing Text — Minimal</title>
+  <style>
+    :root{--bg:#0b1220;--text:#e6eef8;--accent:#60a5fa}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      display:flex;align-items:center;justify-content:center;
+      background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;padding:2rem;
+    }
+    .wrap{max-width:900px;text-align:center}
+    .static{font-size:1.1rem;color:#9fb4d9;margin-bottom:.5rem}
+    .typing{font-size:1.6rem;min-height:2.2rem;white-space:nowrap;overflow:hidden}
+    .cursor{display:inline-block;width:2px;height:1.6rem;background:var(--accent);vertical-align:middle;margin-left:6px;border-radius:2px;animation:blink 1s steps(2,start) infinite}
+    @keyframes blink{50%{opacity:0}}
+    @media (max-width:480px){.typing{font-size:1.1rem}.cursor{height:1.2rem}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="static">Sedang menulis:</div>
+    <div>
+      <span class="typing" id="typing"></span>
+      <span class="cursor" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <script>
+    // Ganti teks di array ini sesuai kebutuhan
+    const phrases = [
+      'Halo, selamat datang!',
+      'Ini contoh efek mengetik sederhana.',
+      'Hanya teks mengetik — tanpa kontrol.'
+    ];
+
+    const el = document.getElementById('typing');
+    const typeSpeed = 60; // ms per karakter
+    const deleteSpeed = 40; // ms per karakter saat menghapus
+    const pauseBetween = 900; // jeda setelah selesai satu frasa
+
+    function wait(ms){return new Promise(r=>setTimeout(r,ms));}
+
+    async function typeText(text){
+      for(let i=0;i<text.length;i++){
+        el.textContent = text.slice(0,i+1);
+        await wait(typeSpeed);
+      }
+    }
+
+    async function deleteText(text){
+      for(let i=text.length;i>0;i--){
+        el.textContent = text.slice(0,i-1);
+        await wait(deleteSpeed);
+      }
+    }
+
+    (async function main(){
+      let i = 0;
+      while(true){
+        const phrase = phrases[i];
+        await typeText(phrase);
+        await wait(pauseBetween);
+        await deleteText(phrase);
+        await wait(250);
+        i = (i+1) % phrases.length;
+      }
+    })();
+  </script>
+</body>
+</html>
