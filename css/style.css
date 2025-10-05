@@ -135,7 +135,6 @@ li {
   color: #ffffff;
   line-height: 27px;
   padding: 8px 36px;
-  background: #14591D;
   border: 1px solid #14591D;
   display: inline-block;
   text-transform: uppercase;
@@ -145,6 +144,8 @@ li {
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  background-color: #14591D;
+  /* background-image: linear-gradient(to right, #14591D 0%, #71B280  50%, #14591D  100%); */
 }
 .btn-style-one:hover {
   color: #14591D;
@@ -155,6 +156,7 @@ li {
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  
 }
 
 .btn-style-two {
@@ -267,6 +269,8 @@ li {
   .logo img{
     width: 30%;
   }
+
+
 
 }
 .header-top .top-right .social-links li {
