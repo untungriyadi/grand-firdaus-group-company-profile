@@ -258,6 +258,20 @@ li {
     padding-left: 0;
   }
 }
+@media (max-width: 768px) {
+  .btn-style-one{
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .logo img{
+    width: 30%;
+  }
+
+  #icon-wa{
+    display: none;
+  }
+}
 .header-top .top-right .social-links li {
   display: inline-block;
 }
@@ -2883,7 +2897,10 @@ button:focus {
     visibility: hidden;
     opacity: 0;
   }
+
+  
 }
+
 @media only screen and (min-width: 1920px) {
   .service-tab-section .tab-list-column .tab-list {
     margin-left: 30% !important;
