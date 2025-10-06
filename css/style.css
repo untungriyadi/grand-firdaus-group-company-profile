@@ -305,7 +305,10 @@ li {
   .header-uper .contact-info .item {
     margin: 0 20px;
   }
+
 }
+
+
 .header-uper .contact-info .item {
   position: relative;
   display: inline-block;
@@ -1033,7 +1036,14 @@ button:focus {
   .service-section .items-container .item {
     margin: 10px 5px;
   }
+  
+  .hero-slider .content .btn-white{
+    margin-bottom: 2%;
+    margin-right: 0;
+  }
+
 }
+
 .service-section .inner-box {
   position: relative;
   border-radius: 5px 5px 0px 0px;
