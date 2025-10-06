@@ -2313,8 +2313,8 @@ button:focus {
 
 .promo-video {
   position: relative;
-  padding: 150px 0;
-  background: url("../images/background/promo-video.jpg");
+  padding: 250px 0;
+  /* background: url("../images/background/promo-video.jpg"); */
   background-size: cover;
   background-position: center center;
 }
@@ -2324,7 +2324,7 @@ button:focus {
   content: "";
   height: 100%;
   width: 100%;
-  background: rgba(12, 120, 163, 0.8);
+  background: rgba(19, 38, 70, 0.6);
 }
 .promo-video .block {
   position: relative;
@@ -2358,16 +2358,14 @@ button:focus {
   border-radius: 100%;
 }
 .promo-video a i {
-  line-height: 70px;
+  line-height: 71px;
   font-size: 20px;
 }
 .promo-video a:hover {
   transform: scale(1.1);
 }
 
-.gallery {
-  padding: 100px 0;
-}
+
 .gallery .gallery-item {
   margin-top: 30px;
   border-radius: 6px;
@@ -2554,7 +2552,7 @@ button:focus {
 
 .page-title {
   position: relative;
-  padding: 80px 0;
+  padding: 10% 0;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
