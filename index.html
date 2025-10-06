@@ -69,7 +69,8 @@
         z-index: 1001;
         opacity: 0;
         transition: all 0.5s ease;
-        width: 30vw;
+        width: 30%;
+        /* height: 80%; */
     }
 
     .popup-content {
@@ -102,6 +103,11 @@
     @media only screen and (max-width: 426px) {
         .popup {
             width: 80%; /* Lebar popup menyesuaikan layar pada perangkat kecil */
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .popup {
+            width: 60%; /* Lebar popup menyesuaikan layar pada perangkat kecil */
         }
     }
     
@@ -1275,7 +1281,7 @@
     <div class="popup" id="popup">
       <span class="close" id="closePopup">&times;</span>
         <div class="popup-content">
-          <img src="images/promo.jpeg" alt=""class="mb-4 img-fluid">
+          <img src="images/promo1.jpeg" alt=""class="mb-4 rounded img-fluid" style="max-width: 100%; height: auto;">
           <br>
           <a href="https://wa.me/6281320846005?text=Halo%20Mimin!%20saya%20tertarik%20dengan%20promonya!" class="btn btn-success w-100" style="border-radius: 25px; padding: 14px 20px;"><h4>MAU PROMO!!!</h4></a>
         </div>
