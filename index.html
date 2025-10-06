@@ -69,7 +69,7 @@
         z-index: 1001;
         opacity: 0;
         transition: all 0.5s ease;
-        width:80%
+        width: 30vw;
     }
 
     .popup-content {
@@ -99,6 +99,13 @@
         transform: translate(-50%, -50%) scale(1);
     }
 
+    @media only screen and (max-width: 426px) {
+        .popup {
+            width: 80%; /* Lebar popup menyesuaikan layar pada perangkat kecil */
+        }
+    }
+    
+    
     /* typing text */
     .wrap{
       max-width:900px;
@@ -1265,7 +1272,7 @@
 
 <!-- popup iklan -->
  <div class="popup-overlay" id="popupOverlay" >
-    <div class="popup" id="popup" style="width: 30%;">
+    <div class="popup" id="popup">
       <span class="close" id="closePopup">&times;</span>
         <div class="popup-content">
           <img src="images/promo.jpeg" alt=""class="mb-4 img-fluid">
