@@ -2594,6 +2594,7 @@ button:focus {
   color: #ffffff;
   font-weight: 500;
   transition: all 500ms ease;
+  /* text-transform: uppercase; */
 }
 .page-title .title-text .title-menu li a:hover {
   color: #14591D;
@@ -2862,16 +2863,18 @@ button:focus {
   bottom: 30px;
   right: 30px;
   z-index: 999;
-  height: 40px;
-  width: 40px;
+  height: 55px;
+  width: 55px;
   background: #14591D;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
   color: white;
   cursor: pointer;
   transition: 0.3s;
   display: none;
+  font-size: 23px;
+  /* margin-bottom: -10px; */
 }
 @media (max-width: 575px) {
   .back-to-top {
